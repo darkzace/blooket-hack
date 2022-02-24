@@ -10,14 +10,14 @@ const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
             }
         }),
         price = ({
-            blizzard: 1,
-            spooky: 1,
-            aquatic: 1,
-            bot: 2,
-            space: 2,
-            breakfast: 1,
-            medieval: 1,
-            wonderland: 2
+            blizzard: 10,
+            spooky: 10,
+            aquatic: 20,
+            bot: 20,
+            space: 20,
+            breakfast: 15,
+            medieval: 15,
+            wonderland: 15,
         })[box],
         opens = amount > Math.floor(tokens / price) ? Math.floor(tokens / price) : amount;
     let interval = new Promise((resolve) => {
@@ -54,4 +54,4 @@ const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
             alert('Results:\n' + Object.entries(count).map(x => `    ${x[1]} ${x[0]}`).join('\n'))
         })
     })
-})([((text) => text.charAt(0).toUpperCase() + text.slice(1))(prompt('What box do you want to open? (e.g. "Space") The limited boxes will not open if they are not avaible')) , Number(prompt('How many do you want to open?'))])
+})([((text) => text.charAt(0).toUpperCase() + text.slice(1))(prompt('What box do you want to open? (e.g. "Space") , Number(prompt('How many do you want to open?'))])
